@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0eq-3U-rL9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--刮刮乐-->
+        <scene sceneID="z6R-xr-Y5Q">
+            <objects>
+                <navigationController id="al3-JJ-Npo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="刮刮乐" id="XVj-wS-Uqf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="daA-gI-ULR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aSf-Q8-sOR" kind="relationship" relationship="rootViewController" id="O1Y-pF-Xyi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pgf-Kn-w8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-594" y="-661"/>
+        </scene>
+        <!--放大镜-->
+        <scene sceneID="eAv-wh-wbo">
+            <objects>
+                <navigationController id="18W-Wa-ta5" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="放大镜" id="dy0-EZ-oer"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gpt-pC-pfI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="eFx-Y3-c28" kind="relationship" relationship="rootViewController" id="R3L-gK-PfT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aaI-vO-lsx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-580" y="205"/>
+        </scene>
+        <!--放大镜-->
+        <scene sceneID="X6O-w6-gwA">
+            <objects>
+                <viewController storyboardIdentifier="MagnifierViewController" id="eFx-Y3-c28" customClass="MagnifierViewController" customModule="MaskDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H3g-Ai-Owa"/>
+                        <viewControllerLayoutGuide type="bottom" id="4dU-uz-Rs8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qPd-JK-7Rp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="heN-D5-Jbm">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="heN-D5-Jbm" firstAttribute="leading" secondItem="qPd-JK-7Rp" secondAttribute="leading" id="9wy-sZ-BN2"/>
+                            <constraint firstItem="4dU-uz-Rs8" firstAttribute="top" secondItem="heN-D5-Jbm" secondAttribute="bottom" id="N4l-5F-pv0"/>
+                            <constraint firstAttribute="trailing" secondItem="heN-D5-Jbm" secondAttribute="trailing" id="jWQ-Ul-ONa"/>
+                            <constraint firstItem="heN-D5-Jbm" firstAttribute="top" secondItem="H3g-Ai-Owa" secondAttribute="bottom" id="wkh-lp-Hji"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="放大镜" id="SRj-YE-7xT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imgv_avatar" destination="heN-D5-Jbm" id="p7K-8g-f9d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dtq-7i-dJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="205"/>
+        </scene>
+        <!--刮刮乐-->
+        <scene sceneID="977-Z6-ck5">
+            <objects>
+                <viewController storyboardIdentifier="ScratchViewController" id="aSf-Q8-sOR" customClass="ScratchViewController" customModule="MaskDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DsH-Wy-raP"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1b-u8-RKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NlG-eS-2Q5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GD6-yh-Mr5">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="gyy-tj-dfA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h1b-u8-RKH" firstAttribute="top" secondItem="gyy-tj-dfA" secondAttribute="bottom" id="6dI-w5-e3V"/>
+                            <constraint firstItem="gyy-tj-dfA" firstAttribute="leading" secondItem="NlG-eS-2Q5" secondAttribute="leading" id="L42-5d-fXz"/>
+                            <constraint firstAttribute="trailing" secondItem="gyy-tj-dfA" secondAttribute="trailing" id="NeP-SA-BZN"/>
+                            <constraint firstAttribute="trailing" secondItem="GD6-yh-Mr5" secondAttribute="trailing" id="SNf-ae-oz2"/>
+                            <constraint firstItem="GD6-yh-Mr5" firstAttribute="top" secondItem="DsH-Wy-raP" secondAttribute="bottom" id="cv9-ms-HQw"/>
+                            <constraint firstItem="gyy-tj-dfA" firstAttribute="top" secondItem="DsH-Wy-raP" secondAttribute="bottom" id="gSQ-Rj-FoE"/>
+                            <constraint firstItem="GD6-yh-Mr5" firstAttribute="leading" secondItem="NlG-eS-2Q5" secondAttribute="leading" id="rcw-zQ-Xjt"/>
+                            <constraint firstItem="h1b-u8-RKH" firstAttribute="top" secondItem="GD6-yh-Mr5" secondAttribute="bottom" id="tdF-7z-keu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="刮刮乐" id="0uW-hs-PB9">
+                        <barButtonItem key="leftBarButtonItem" title="重置" id="J56-Fb-AiI">
+                            <connections>
+                                <action selector="reset:" destination="aSf-Q8-sOR" id="Tch-Yh-04H"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="隐藏封面" id="DlU-eI-vVl">
+                            <connections>
+                                <action selector="showOrHideLayer:" destination="aSf-Q8-sOR" id="dW7-DV-y0e"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imgv_avatar" destination="gyy-tj-dfA" id="GQj-VL-z57"/>
+                        <outlet property="view_mask" destination="GD6-yh-Mr5" id="w7W-8B-wqj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUw-3l-vQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="-661"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cDf-2p-fA4">
+            <objects>
+                <tabBarController id="0eq-3U-rL9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="6Sx-o5-aan">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="al3-JJ-Npo" kind="relationship" relationship="viewControllers" id="fu1-1T-enm"/>
+                        <segue destination="18W-Wa-ta5" kind="relationship" relationship="viewControllers" id="oCz-mk-NKJ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4R-sj-tmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1482" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar" width="319" height="319"/>
+    </resources>
+</document>
